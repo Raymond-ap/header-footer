@@ -13,6 +13,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
     <!-- custom css -->
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Document</title>
@@ -124,6 +128,242 @@
       </nav>
     </header>
     <!-- end of navbar -->
+
+    <!-- form -->
+    <!-- the row are for the single tags ona line -->
+    <!-- the col-3 are for the 3 tags on a same line -->
+    <main class="main">
+      <div class="form-wrapper">
+        <form action="" class="form">
+          <!-- 3 col -->
+          <div class="col-3">
+            <div class="firstName">
+              <label for="fName">first name</label>
+              <br />
+              <input
+                type="text"
+                name="fName"
+                id="fName"
+                placeholder="enter your first name"
+              />
+            </div>
+
+            <div class="middleName">
+              <label for="mName">middle name</label>
+              <br />
+              <input
+                type="text"
+                name="mName"
+                id="mName"
+                placeholder="enter your middle name"
+              />
+            </div>
+
+            <div class="lastName">
+              <label for="lName">Surname</label>
+              <br />
+              <input
+                type="text"
+                name="lName"
+                id="lName"
+                placeholder="enter your Surname"
+              />
+            </div>
+          </div>
+          <!-- row -->
+          <div class="row">
+            <div class="home">
+              <label for="homeTown">Hometown</label>
+              <br />
+              <input
+                type="text"
+                name="homeTown"
+                id="homeTown"
+                placeholder="Your hometown"
+              />
+            </div>
+            <div class="reginon">
+              <label for="reg">Region</label>
+              <br />
+              <input
+                type="text"
+                name="reg"
+                id="reg"
+                placeholder="Your region"
+              />
+            </div>
+          </div>
+          <!-- 3 col -->
+          <div class="col-3">
+            <div class="residence">
+              <label for="res">Region of residence</label>
+              <br />
+              <input type="text" name="res" placeholder="Region of residence" />
+            </div>
+            <div class="city-wrapper">
+              <label for="city">city</label>
+              <br />
+              <input type="text" name="city" placeholder="enter your city" />
+            </div>
+            <div class="Area">
+              <label for="area">area</label>
+              <br />
+              <input type="text" name="area" placeholder="Area/suburb" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="emailAdd">
+              <label for="email">Email</label>
+              <br />
+              <input type="email" placeholder="Enter your email address" />
+            </div>
+          </div>
+          <!-- 3 col -->
+          <div class="col-3">
+            <div class="gender">
+              <label for="gender">gender</label>
+              <br />
+              <select name="gender">
+                <option value="0">Select status:</option>
+                <option value="male">male</option>
+                <option value="female">female</option>
+              </select>
+            </div>
+            <div class="DOB">
+              <label for="date">date of birth(DAY/MONTH/YEAR)</label>
+              <br />
+              <input type="date" name="date" />
+            </div>
+            <div class="nationality">
+              <label for="nationality">nationality</label>
+              <br />
+              <select name="nationality">
+                <option value="0">Select your nationality</option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+              </select>
+            </div>
+          </div>
+          <!-- 3 col -->
+          <div class="col-3">
+            <div class="marital">
+              <label for="marital">marital status</label>
+              <br />
+              <select name="marital">
+                <option value="0">Select status</option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+              </select>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="contact">
+              <label for="tel-1">phone number 1</label><br />
+              <input
+                type="tel-1"
+                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                placeholder="Enter your phone number"
+              />
+            </div>
+            <div class="contact">
+              <label for="tel-2">phone number 2</label><br />
+              <input
+                type="tel-2"
+                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                placeholder="Enter your phone number"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <label for="facebook">facebook</label>
+            <br />
+            <input type="text" name="facebook" placeholder="facebook handle" />
+          </div>
+          <div class="col-3">
+            <div>
+              <label for="instagram">instagram</label>
+              <br />
+              <input
+                type="text"
+                name="instagram"
+                placeholder="instagram handle"
+              />
+            </div>
+            <div>
+              <label for="twitter">twitter</label>
+              <br />
+              <input type="text" name="twitter" placeholder="twitter handle" />
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="school">
+              <label for="sch">highest level of education</label>
+              <br />
+              <select name="sch">
+                <option value="0">Select level:</option>
+                <option value="none">none</option>
+                <option value="primary">primary</option>
+                <option value="junior">junior high</option>
+                <option value="senior">senior high</option>
+                <option value="undergraduate">undergraduate</option>
+                <option value="graduate">graduate</option>
+              </select>
+            </div>
+            <div class="employment">
+              <label for="employ">employment status</label>
+              <br />
+              <select name="employ">
+                <option value="0">Select status:</option>
+                <option value="unemployed">unemployed</option>
+                <option value="self-employed">self-employed</option>
+                <option value="employee">employee</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <label for="employ">if employed, what do you do?</label>
+            <br />
+            <textarea
+              name="employ"
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="details here"
+            ></textarea>
+          </div>
+          <div class="col-3">
+            <div>
+              <label for="workplace">name of workplace/business</label>
+              <br />
+              <input
+                type="text"
+                name="workplace"
+                placeholder="name of workplace"
+              />
+            </div>
+            <div>
+              <label for="region-workplace">region of workplace/business</label>
+              <br />
+              <input
+                type="text"
+                name="region-workplace"
+                placeholder="region of workplace"
+              />
+            </div>
+          </div>
+          <div class="btns">
+            <button class="btn submit" type="submit">proceed</button>
+            <button class="btn cancel" type="submit">
+              <i class="fas fa-times">&nbsp;&nbsp;cancel form</i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <!-- end of form -->
+
     <!-- footer -->
     <footer class="footer">
       <div class="footer-wrapper">
