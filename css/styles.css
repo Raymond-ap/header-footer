@@ -1,0 +1,253 @@
+/* reset */
+
+:root {
+  --header: rgb(216, 216, 216);
+  --footer: rgb(53, 53, 53);
+  --white: #fff;
+  --black: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* =================================== */
+/* header */
+.header {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  background: var(--header);
+  position: relative;
+  z-index: 2;
+
+  -webkit-box-shadow: 0px 8px 5px -6px rgba(140, 140, 140, 0.78);
+  -moz-box-shadow: 0px 8px 5px -6px rgba(140, 140, 140, 0.78);
+  box-shadow: 0px 8px 5px -6px rgba(140, 140, 140, 0.78);
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.logo svg {
+  width: 11%;
+}
+
+.burgerIcon,
+.mobile-social-icons {
+  display: none;
+}
+
+.links,
+.responsive {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.single-link {
+  padding: 0 1rem;
+  text-transform: capitalize;
+  font-size: 17px;
+}
+
+.single-link a {
+  color: rgb(48, 47, 47);
+}
+
+.single-link:nth-child(3) {
+  position: relative;
+}
+
+.nested-link {
+  float: right;
+  background: var(--header);
+  position: absolute;
+  padding: 1rem;
+  right: 0;
+  display: none;
+}
+
+.nested-link > li {
+  padding: 0.5rem 0;
+}
+
+.nested-link > li:hover {
+  padding-left: 0.5rem;
+  transition: all 0.5s linear;
+}
+
+.single-link:nth-child(3):hover .nested-link {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons > div,
+.mobile-social-icons > div {
+  margin: 0 1rem;
+}
+
+.social-icons > div i,
+.mobile-social-icons > div i {
+  font-size: 1.2rem;
+  color: var(--black);
+  cursor: pointer;
+}
+
+/* responsive header (tablet)*/
+@media screen and (max-width: 1000px) {
+  .nav {
+    display: initial;
+    padding: 0;
+    justify-content: initial;
+  }
+
+  .header {
+    height: initial;
+  }
+
+  .logo svg {
+    width: 10%;
+  }
+
+  .burgerIcon {
+    display: block;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  .fa-times {
+    display: none;
+  }
+
+  .mobile-nav {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .links-wrapper {
+    border-top: 1px solid #fff;
+    padding: 1rem;
+    position: fixed;
+    top: 45px;
+    left: 0;
+    right: 0;
+    height: initial;
+    background: var(--header);
+    transition: all 0.5s linear;
+    transform: translateX(100%);
+    z-index: 2;
+
+    -webkit-box-shadow: 0px 8px 5px -6px rgba(140, 140, 140, 0.78);
+    -moz-box-shadow: 0px 8px 5px -6px rgba(140, 140, 140, 0.78);
+    box-shadow: 0px 8px 5px -6px rgba(140, 140, 140, 0.78);
+  }
+
+  .show-links {
+    transition: all 0.5s linear;
+    transform: translateX(0);
+  }
+
+  .toggle .fa-bars {
+    transition: all 0.5s linear;
+    display: none;
+  }
+  .toggle .fa-times {
+    display: block;
+  }
+
+  .links {
+    flex-direction: column;
+  }
+
+  .single-link {
+    padding: 1rem 0;
+  }
+
+  .social-icons {
+    display: none;
+  }
+
+  .mobile-social-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-social-icons > div {
+    margin: 1rem 0;
+  }
+}
+
+.footer {
+  min-height: 65px;
+  background: var(--footer);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  color: var(--white);
+}
+
+.footer .logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-wrapper {
+  margin: 0 2rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-wrapper > div p {
+  font-weight: 100;
+}
+
+.logo-img img {
+  width: 20%;
+}
+
+@media screen and (max-width: 550px) {
+  .footer-wrapper {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .footer .logo .logo-img {
+    margin-bottom: 1rem;
+  }
+  .footer .logo {
+    flex-direction: column;
+  }
+}
